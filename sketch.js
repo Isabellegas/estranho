@@ -18,4 +18,11 @@ function setup() {
 function draw() {
   background(220);
   jogador.show();
+  jogador.move();
+}
+
+function keyPressed() {
+  if (key == " ") {
+    jogador.jump();
+  }
 }
