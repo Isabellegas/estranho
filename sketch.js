@@ -13,16 +13,29 @@ function preload(){
 function setup() {
   createCanvas(windowWidth/2, windowHeight/2);
   jogador = new Jogador();
-}
+  
+} 
 
 function draw() {
   background(220);
   jogador.show();
   jogador.move();
+nascerObstaculo();
+for (let o of obstaculo) {
+o.show();
+o.move();
+}
+
+
 }
 
 function keyPressed() {
   if (key == " ") {
     jogador.jump();
+  }
+}
+function nascerObstaculo(){
+  if(frameCount%80===0){
+    obstaculo.push(new Obstaculo());
   }
 }
