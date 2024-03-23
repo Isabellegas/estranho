@@ -17,6 +17,11 @@ function setup() {
 } 
 
 function draw() {
+  nascerFundo();
+for (let f of fundo) {
+f.show();
+f.move();
+}
   background(220);
   jogador.show();
   jogador.move();
@@ -25,8 +30,7 @@ for (let o of obstaculo) {
 o.show();
 o.move();
 }
-fundo.show();
-  fundo.move();
+  
 
 }
 
@@ -34,14 +38,15 @@ function keyPressed() {
   if (key == " ") {
     jogador.jump();
   }
+
 }
 function nascerObstaculo(){
   if(frameCount%80===0){
     obstaculo.push(new Obstaculo());
   }
 }
-function nascerFundo(){
-  if(frameCount%80===0){
-    fundo.push(new fundo());
-  }
+  function nascerFundo(){
+    if(frameCount%80===0){
+      fundo.push(new Fundo());
+    }
 }

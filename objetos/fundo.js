@@ -1,13 +1,13 @@
 class Fundo{
     constructor(){
-        this.w = 70;
-        this.h = 70;
-        this.x = width;
-        this.y = height - this.h;
+        this.w = width;
+        this.h = height - this.h;
+        this.x = 0;
+        this.y = 0;
     }
     
     show(){
-        image(imgfundo, this.x, this.y, this.w, this.h)
+        image(imgobstaculo, this.x, this.y, this.w, this.h)
     }
     move(){
         this.x -= 16;
