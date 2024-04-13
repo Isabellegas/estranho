@@ -1,15 +1,15 @@
-class Fundo{
-    constructor(){
+class Fundo {
+    constructor() {
         this.w = width;
         this.h = height;
         this.x = 0;
         this.y = height - this.h;;
     }
-    
-    show(){
+
+    show() {
         image(imgfundo, this.x, this.y, this.w, this.h)
     }
-    move(){
+    move() {
         this.x -= 16;
     }
 }
