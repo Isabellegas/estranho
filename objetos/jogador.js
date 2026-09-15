@@ -22,4 +22,12 @@ class Jogador{
     this.vy += this.g;
     this.y = constrain(this.y, 30, height - this.h);
   }
+
+  hits(obstaculo){
+    let x1 = this.x + this.w*0.5;
+    let y1 = this.y + this.h*0.5;
+    let x2 = obstaculo.x - obstaculo.w*0.5;
+    let y2 = obstaculo.y - obstaculo.h*0.5;
+    return collideRectRect(x1,y1,this.w,this.h,x2,y2,obstaculo.w,obstaculo.h);
+  }
 }

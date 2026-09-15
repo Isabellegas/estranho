@@ -29,6 +29,10 @@ function draw() {
   for (let o of obstaculo) {
     o.show();
     o.move();
+    if (jogador.hits(o)){
+      console.log("perdeuuu");
+      noLoop();
+    }
   }
 
 
